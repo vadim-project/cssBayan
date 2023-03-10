@@ -15,33 +15,27 @@ html {
     align-items: center;
 }
 
-
-.meme-header-container img {
-    width: 4vw;
-    height: 4vh;
-}
-
 .meme {
     display: flex;
-    flex-direction: column;
-}
-
-.meme-header-container {
-    width: 100%;
-    display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+    border-bottom: 1px solid black;
+}
+
+.plus {
+    width: 25px;
+    height: 25px;
+}
+
+input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
 }
 
 .meme-image-container {
-    height: 100%;
-}
-
-.meme-image-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
 }
 
 .meme-image-container img {
@@ -49,7 +43,19 @@ html {
     height: 0px;
 }
 
-.meme-header-container:hover .meme-image-container img{
-    width: 100px;
-    height: 100px;
+.meme:hover > .asd > .meme-image-container > img {
+    transition: 0.3s;
+    width: 60vw;
+    height: 60vh;
+}
+
+.meme:hover > img {
+    transition: 0.5s linear;
+    rotate: 45deg;
+}
+
+input:checked ~ .asd > .meme-image-container > img {
+    transition: 0.5s;
+    width: 60vw;
+    height: 60vh;
 }
