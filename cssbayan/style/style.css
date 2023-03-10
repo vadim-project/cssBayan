@@ -15,10 +15,6 @@ html {
     align-items: center;
 }
 
-.memes-image img {
-    width: 30vw;
-    height: 40vh;
-}
 
 .meme-header-container img {
     width: 4vw;
@@ -27,6 +23,7 @@ html {
 
 .meme {
     display: flex;
+    flex-direction: column;
 }
 
 .meme-header-container {
@@ -35,4 +32,24 @@ html {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+}
+
+.meme-image-container {
+    height: 100%;
+}
+
+.meme-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.meme-image-container img {
+    width: 0px;
+    height: 0px;
+}
+
+.meme-header-container:hover .meme-image-container img{
+    width: 100px;
+    height: 100px;
 }
